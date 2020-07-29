@@ -8,6 +8,8 @@ from ocrdemo import utils
 
 
 class PreprocessImage:
+
+
     def cleanNoises(self, image):
         '''Preprocess image'''
         utils.info('Deskewing the file: {}'.format(image))
@@ -16,6 +18,7 @@ class PreprocessImage:
         self._cleanShadow(image)
 
         return True
+
 
     def _cleanShadow(self, input_file):
         img = cv2.imread(input_file, -1)
@@ -38,6 +41,7 @@ class PreprocessImage:
 
         result = cv2.merge(result_planes)
         cv2.imwrite(input_file, result)
+
 
     def _rotateFile(self, input_file):
         image = cv2.imread(input_file)
