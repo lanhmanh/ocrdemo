@@ -1,4 +1,5 @@
 ## Installation guide
+
 1. Install [poetry](https://python-poetry.org/)
 2. Install dependencies
 ```sh
