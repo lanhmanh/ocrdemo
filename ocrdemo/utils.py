@@ -17,7 +17,6 @@ logger.addHandler(handler)
 
 
 def setLevel(verbose=0):
-    logger.info("verbose %s", verbose)
     if (verbose != 0):
         logger.setLevel(DEBUG)
         handler.setLevel(DEBUG)

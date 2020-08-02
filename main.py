@@ -29,7 +29,7 @@ def handler(input, output, verbose):
     f = open(output, 'a')
     list_images = utils.getImages(input)
     preprocess = PreprocessImage()
-    with PyTessBaseAPI(oem=OEM.TESSERACT_CUBE_COMBINED) as api:
+    with PyTessBaseAPI(oem=OEM.LSTM_ONLY) as api:
         for image in list_images:
             # Pre-process the image
             preprocess.cleanNoises(image)
