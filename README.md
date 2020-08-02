@@ -16,3 +16,13 @@ poetry run python main.py -i [INPUT] -o [OUTPUT]
 ```sh
 python main.py --help
 ```
+
+## Docker
+- Build with docker
+```sh
+docker-compose build
+docker-compose up -d
+```
+- Usage
+1. Copy input file `*.png`, `*.pdf`,.. into project's folder. Eg. `./tests/data/test.png`
+2. Command `docker exec -it ocrdemo python3 main.py -i tests/data/test.png -o [OUTPUT]`
